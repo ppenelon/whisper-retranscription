@@ -1,0 +1,59 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.topbar {
+    display: flex;
+    background: #2196F3; 
+    color: white;
+    font-size: 22px;
+}
+.topbar span {
+    flex: 1;
+    align-self: center;
+    margin-left: 20px;
+}
+.topbar img {
+    width: 70px;
+}
+
+.container {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+}
+
+.container > * {
+    width: 50%;
+}
+
+.dropzone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.dropzone span {
+    font-size: 24px;
+    color: #0000004f;
+}
+.dropzone input {
+    padding: 10px 20px;
+}
+
+.output {
+    height: 100%;
+    padding: 10px;
+}
+.output textarea {
+    width: calc(100% - 25px);
+    height: calc(100% - 25px);
+    margin: 10px;
+}

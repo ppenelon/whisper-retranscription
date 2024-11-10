@@ -1,0 +1,14 @@
+services:
+  nginx:
+    image: nginx
+    volumes:
+    - ./webapp:/usr/share/nginx/html:ro
+    - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    ports:
+    - "8088:80"
+
+  whisper:
+    image: onerahmet/openai-whisper-asr-webservice:latest
+    environment:
+      - ASR_MODEL=base
+      - ASR_ENGINE=openai_whisper
