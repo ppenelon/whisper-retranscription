@@ -20,5 +20,5 @@ document.getElementById("fileinput").addEventListener("change", async function(e
     const { text, segments, language } = await response.json();
     
     clearInterval(interval);
-    document.getElementById("output").value = text;
+    document.getElementById("output").value = text.replace(/\s*\.+\s*/g, ".\n\n").trim();
 });
